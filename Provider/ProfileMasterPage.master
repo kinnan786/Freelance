@@ -1,0 +1,109 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeFile="ProfileMasterPage.master.cs" Inherits="ProfileMasterPage" %>
+<%@ MasterType VirtualPath="~/Site.master" %>
+
+<asp:Content ID="ProfileMasterPageHeadContent" ContentPlaceHolderID="MasterHeadContent" Runat="Server">
+    <script type="text/javascript" language="javascript">
+
+function DoBlur(textbox) {
+
+    textbox.className = 'textboxOutFocus';
+}
+
+function DoFocus(textbox) {
+    textbox.className = 'textboxInFocus';
+}
+
+function checkFileExtension(elem) {
+    var filePath = elem.value;
+
+    if (filePath.indexOf('.') == -1)
+        return false;
+
+    var validExtensions = new Array();
+    var ext = filePath.substring(filePath.lastIndexOf('.') + 1).toLowerCase();
+
+    validExtensions[0] = 'jpg';
+    validExtensions[1] = 'jpeg';
+    validExtensions[2] = 'bmp';
+    validExtensions[3] = 'png';
+    validExtensions[4] = 'gif';
+
+    for (var i = 0; i < validExtensions.length; i++) {
+        if (ext == validExtensions[i])
+            return true;
+    }
+    document.getElementById("ctl00_ctl00_MasterMainContent_ProfileMasterPageRightContent_ImgUpld").Text = "";
+    alert('The file extension ' + ext.toUpperCase() + ' is not allowed!');
+    return false;
+}
+</script>
+<style type="text/css"> 
+<!-- 
+ 
+ #navbar ul { 
+        margin: 0; 
+        padding: 5px; 
+        list-style-type: none; 
+        background-color:White; 
+        position:relative;
+        } 
+ 
+#navbar ul li {  
+        padding-bottom:5px;
+        } 
+ 
+#navbar ul li a  
+{
+ font: bold 15px Arial, sans-serif;
+ text-decoration: none;
+ height: 50%;
+        } 
+ 
+#navbar ul li a:hover { 
+        color: #FFF; 
+        background-color: #BBB; 
+        } 
+ 
+--> 
+</style> 
+</asp:Content>
+<asp:Content ID="ProfileMasterPageMainContent" ContentPlaceHolderID="MasterMainContent" Runat="Server">
+    <div id="leftContent">
+        <asp:ContentPlaceHolder ID="ProfileMasterPageLeftContent" runat="server">
+            <div id="navbar"> 
+            <ul>
+                <li>
+                <a href="/Freelance/Provider/ProfilePage.aspx" title="Profile" style="width:100px;">&nbsp;&nbsp;Profile&nbsp;&nbsp;</a></li>
+                <li><a href="/Provider/Introduction.aspx" title="Introduction" style="width:100px;">&nbsp;&nbsp;Introduction&nbsp;&nbsp;</a></li>
+                <li><a href="/Provider/Skill/AddProviderSkill.aspx" title="Key Skills" style="width:100px;">&nbsp;&nbsp;Key Skills&nbsp;&nbsp;</a></li>
+                <li><a href="/Provider/Contact/AddProviderContact.aspx" title="Contact" style="width:100px;">&nbsp;&nbsp;Contact&nbsp;&nbsp;</a></li>
+                <li><a href="/Provider/ProviderImage.aspx" title="Image" style="width:100px;">&nbsp;&nbsp;Image&nbsp;&nbsp;</a></li>
+                <li><a href="/Provider/Setting/Setting.aspx" title="Setting" style="width:100px;">&nbsp;&nbsp;Setting&nbsp;&nbsp;</a></li>
+            </ul>
+            </div>
+
+
+            <table>
+               <%-- <tr><td><asp:HyperLink ID="LinkProfilePage" runat="server" ForeColor="Black" NavigateUrl="~/Provider/ProfilePage.aspx" name="lnkProfilepage" >Profile</asp:HyperLink></td></tr>
+                <tr><td><asp:HyperLink ID="LinkProviderIntroduction" runat="server" ForeColor="Black"  name="lnkIntroduction" NavigateUrl="~/Provider/Introduction.aspx">Introduction</asp:HyperLink></td></tr>
+                <tr><td><asp:HyperLink ID="LinkKeySkill" NavigateUrl="~/Provider/Skill/AddProviderSkill.aspx" runat="server" ForeColor="Black" >Key Skills</asp:HyperLink></td></tr>
+                <tr><td><asp:HyperLink ID="LinkContact" runat="server" ForeColor="Black"  NavigateUrl="~/Provider/Contact/AddProviderContact.aspx">Contact</asp:HyperLink></td></tr>
+                <tr><td><asp:HyperLink ID="LinkImg" runat="server" ForeColor="Black"  NavigateUrl="~/Provider/ProviderImage.aspx">Image</asp:HyperLink></td></tr>
+                <tr><td><asp:HyperLink ID="LinkAccountSetting" runat="server" ForeColor="Black"  NavigateUrl="~/Provider/Setting/Setting.aspx">Setting</asp:HyperLink></td></tr>
+--%>            
+            </table>
+        </asp:ContentPlaceHolder>
+    </div>
+  <table cellpadding=0 cellspacing=0>
+    <tr>
+        <td valign="top">
+          <asp:ContentPlaceHolder ID="ProfileMasterPageRightContent" runat="server">
+          </asp:ContentPlaceHolder>
+        </td> 
+    </tr>
+    <tr>
+        <td></td>
+    </tr>
+  </table>
+</asp:Content>
+

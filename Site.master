@@ -1,0 +1,114 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="SiteMaster" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+<title id="Title"></title>
+    <link href="Styles/style.css" rel="stylesheet" type="text/css" />
+    <meta id="description" name="description" runat="server" content="" />
+    <meta id="keywords" name="keyword" runat="server" content="" />
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="MasterHeadContent" runat="server">
+        
+    </asp:ContentPlaceHolder>
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-26779880-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+</script>
+</head>
+<body>
+    <form runat="server">
+    <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server">
+    </asp:ToolkitScriptManager>
+    <div id="header">
+        <div id="header_wrap">
+            <div class="box">
+                <!-- start logo -->
+                <div id="logo">
+                <asp:HyperLink ID="lnkwork4sale" runat="server" Font-Size="XX-Large" ForeColor="White" NavigateUrl="~/Default.aspx">WORK4SALE</asp:HyperLink>
+                  </div>
+                <!-- end logo -->
+                <!-- start tagline -->
+                <div id="tagline">
+                    Hire Or Join The World Work Force</div>
+                <div class="loginDisplay">
+                    <asp:HyperLink ID="LnkSetting" runat="server" NavigateUrl="~/Provider/Setting/Setting.aspx">Settings |</asp:HyperLink>
+                    <asp:HyperLink ID="LnkLogut" runat="server" NavigateUrl="~/Authentication/Logout.aspx">Log Out</asp:HyperLink>
+                    <asp:HyperLink ID="LnkLogIn" runat="server" NavigateUrl="~/Authentication/Login.aspx">Log In |</asp:HyperLink>
+                    <asp:HyperLink ID="LnkRegister" runat="server" NavigateUrl="~/Provider/RegisterProvider.aspx">Register</asp:HyperLink>
+                </div>
+                <!-- end tagline -->
+            </div>
+        </div>
+    </div>
+    <!-- end header -->
+    <!-- start navigation -->
+    <div id="nav_bar">
+        <div class="box">
+            <asp:Literal ID="LiteralMenu" runat="server"></asp:Literal>
+        </div>
+    </div>
+    <!-- end navigation -->
+    <!-- start container -->
+    <div id="container">
+        <!-- start white container -->
+        <div id="white_container" class="inner">
+            <div class="box">
+                <!-- start leftcol -->
+                <div id="leftcol">
+                    
+                    <asp:ContentPlaceHolder ID="MasterMainContent" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+                <!-- end leftcol -->
+                <!-- start rightcol -->
+                <div id="rightcol">
+                    <!-- common box1 -->
+                    <div class="common_box last">
+                       
+                    </div>
+                    <div class="clear">
+                    </div>
+                    <!-- common box1 -->
+                </div>
+                <!-- end rightcol -->
+            </div>
+            <div class="clear">
+            </div>
+        </div>
+        <!-- end white container -->
+    </div>
+    <br /><br /><br />
+    <div class=" footer" style=" border-top:1px solid black;">
+        <table>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <asp:HyperLink ID="LnkAboutus" runat="server" NavigateUrl="~/Footer/About.aspx">About US</asp:HyperLink>
+                  | <asp:HyperLink ID="Lnkcontactus" runat="server" NavigateUrl="~/Footer/Contactus.aspx">Contact US/FeedBack</asp:HyperLink>
+                  | <asp:HyperLink ID="LnkPrivacy" runat="server" NavigateUrl="~/Footer/Privacy.aspx">Privacy</asp:HyperLink>
+                  | <asp:HyperLink ID="LnkTermofService" runat="server" NavigateUrl="~/Footer/Termofservices.aspx">Term Of Services</asp:HyperLink>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">
+                    ©2011 Kintechno Corporation. Use of this Web site constitutes acceptance of the
+                    Kintechno User Agreement and incorporated Policies. The terms "Employer" and "Provider"
+                    are used in the generic sense and are not meant to define the legal relationship
+                    between the two parties.
+                </td>
+            </tr>
+        </table>
+    </div>
+    <%--    </div>--%>
+    </form>
+</body>
+</html>

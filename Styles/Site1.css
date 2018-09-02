@@ -1,0 +1,483 @@
+﻿    /* DEFAULTS
+----------------------------------------------------------*/
+
+body   
+{
+    font-size: 11px;
+    font-family: lucida grande,tahoma,verdana,arial,sans-serif;
+    margin: 0px;
+    padding: 0px;
+    color: #696969;
+}
+
+a:link, a:visited
+{
+    color: #034af3;
+}
+
+a:hover
+{
+    color: #1d60ff;
+    text-decoration: none;
+}
+
+a:active
+{
+    color: #034af3;
+}
+
+p
+{
+    margin-bottom: 10px;
+    line-height: 1.6em;
+}
+
+
+/* HEADINGS   
+----------------------------------------------------------*/
+
+h1, h2, h3, h4, h5, h6
+{
+    font-size: 1.5em;
+    color: #666666;
+    font-variant: small-caps;
+    text-transform: none;
+    font-weight: 200;
+    margin-bottom: 0px;
+}
+
+h1
+{
+    font-size: 1.6em;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+h2
+{
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+h3
+{
+    font-size: 1.2em;
+}
+
+h4
+{
+    font-size: 1.1em;
+}
+
+h5, h6
+{
+    font-size: 1em;
+}
+
+/* this rule styles <h1> and <h2> tags that are the 
+first child of the left and right table columns */
+.rightColumn > h1, .rightColumn > h2, .leftColumn > h1, .leftColumn > h2
+{
+    margin-top: 0px;
+}
+
+
+/* PRIMARY LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+/*
+.page
+{
+    width: 100%;
+    background-color: #fff;
+ }
+*/
+
+.header
+{
+    background-color: #3b5999;
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
+
+.header h1
+{
+    font-weight: 700;
+    margin: 0px;
+    padding: 0px 0px 0px 20px;
+    color: #f9f9f9;
+    border: none;
+    line-height: 2em;
+    font-size: 2em;
+}
+
+.main
+{
+    padding: 0px 12px;
+    margin: 12px 8px 2px 8px;
+    min-height: 600px;
+}
+
+.leftCol
+{
+    padding: 6px 0px;
+    margin: 12px 8px 8px 8px;
+    width: 200px;
+    min-height: 200px;
+}
+
+.footer
+{
+    color: #4e5766;
+    padding: 8px 0px 0px 0px;
+    margin: 0px auto;
+    text-align: center;
+    line-height: normal;
+}
+
+
+/* TAB MENU   
+----------------------------------------------------------*/
+
+.hideSkiplink
+{
+     background-color: #3b5999;
+     border: solid 1px #E9E9E9;
+     width:100%;
+     height:5px;
+}
+
+.hideSkiplink a:link
+{
+    color: Black;
+}
+
+
+.hideSkiplink a:visited
+{
+    color: Black;
+}
+
+.hideSkiplink a:hover
+{
+    color: Black;
+}
+
+
+.menu
+{
+    padding: 4px 0px 4px 8px;
+}
+
+.menu ul
+{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    width: auto;
+}
+
+.menu ul li a, div.menu ul li a:visited
+{
+    border: 1px #4e667d solid;
+    color: #dde4ec;
+    display: block;
+    line-height: 1.35em;
+    padding: 4px 20px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+div.menu ul li a:hover
+{
+    text-decoration: none;
+}
+
+
+div.menu ul li a:active
+{
+
+    text-decoration: none;
+}
+
+/* FORM ELEMENTS   
+----------------------------------------------------------*/
+
+fieldset
+{
+    margin: 1em 0px;
+    padding: 1em;
+    border: 1px solid #ccc;
+}
+
+fieldset p 
+{
+    margin: 2px 12px 10px 10px;
+}
+
+fieldset.login label, fieldset.register label, fieldset.changePassword label
+{
+    display: block;
+}
+
+fieldset label.inline 
+{
+    display: inline;
+}
+
+legend 
+{
+    font-size: 1.1em;
+    font-weight: 600;
+    padding: 2px 4px 8px 4px;
+}
+
+input.textEntry 
+{
+    width: 320px;
+    border: 1px solid #ccc;
+}
+
+input.passwordEntry 
+{
+    width: 320px;
+    border: 1px solid #ccc;
+}
+
+div.accountInfo
+{
+    width: 42%;
+}
+
+/* MISC  
+----------------------------------------------------------*/
+
+.clear
+{
+    clear: both;
+}
+
+.title
+{
+    display: block;
+    float: left;
+    text-align: left;
+    width: auto;
+}
+
+.loginDisplay
+{
+    font-size: 1.1em;
+    display: block;
+    text-align: right;
+    font-style:normal;
+    color: White;
+    background-color:#3b5999;
+}
+
+.loginDisplay a:link
+{
+    color: Black;
+}
+
+.loginDisplay a:visited
+{
+    color: Black;
+}
+
+.loginDisplay a:hover
+{
+    color: Black;
+}
+
+.failureNotification
+{
+    font-size: 1.2em;
+    color: Red;
+}
+
+.bold
+{
+    font-weight: bold;
+}
+
+.submitButton
+{
+    text-align: right;
+    padding-right: 10px;
+}
+
+
+#leftContent {
+    width: 300px;
+    height:300px;    
+    padding: 10px;
+    font-size: 12px;
+    text-align: left;
+    position: absolute;
+    margin-top: 10px;
+    left: 20px;
+    top: 70px;
+    color:White;
+}
+
+#mainborder
+{
+ border-right-color:Black;
+ border-right-style:solid;
+ border:1px;    
+}
+    
+#mainContent {
+    text-align: left;
+    margin-left: 155px;
+    padding: 5px;
+    width:1000px;
+}
+
+#rightContent
+{
+    width:200px;
+    vertical-align:top;
+    float: right;
+    position:relative;
+}
+
+.logintable
+{
+     margin-left: auto; 
+     margin-right: auto;
+     border-style: ridge; 
+     border-width: thin; 
+     border-color: #9CAAC1; 
+     font-family: Serif;
+     font-size: medium; 
+     text-align: center;
+}
+
+td.TableHeader
+{
+    background-color:#546E96;
+    text-align:center;
+    color:White;
+    height:25px;
+}
+
+table.CascadeTable
+{
+      margin-left: auto; 
+      margin-right: auto;
+      border-style: ridge; 
+      border-width: thin;
+      border-color: #546E96; 
+      font-family: lucida grande, tahoma, verdana, arial, sans-serif;
+      text-align: center;
+      padding:0px 0px 0px 0px;
+      
+    }
+    
+    div.Statment
+    {
+      background-color:#546E96;
+      height:50px;
+    }
+
+.imagetable {
+	font-family: lucida grande, tahoma, verdana, arial, sans-serif;
+	font-size:11px;
+	color:#333333;
+	border-width: 1px;
+	border-color: #999999;
+	border-collapse: collapse;
+}
+.imagetable th {
+	background:#b5cfd2 url('Images/cell-blue.jpg');
+	border-width: 1px;
+	border-style: solid;
+	border-color: #999999;
+}
+.imagetable td {
+	background:#dcddc0 url('Images/cell-grey.jpg');
+	border-width: 1px;
+	border-style: solid;
+	border-color: #999999;
+}
+
+
+.left {
+float: left;
+width: 200px;
+margin: 0;
+padding: 0;
+}
+
+
+
+/* NEW 
+----------------------------------------------------------*/
+
+.TableStyle
+{
+    background-color: #DFEAF7;
+    border: solid 1px #a4b0be;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+.TableStyle th
+{
+    background-color: #a4b0be;
+    height:20px;
+    }
+
+.footer
+{
+    clear: both;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+}
+        
+.banner
+{
+    height:10px;
+    padding: 0px;
+    margin: 0px;
+}
+        
+.container
+{
+    width: 1080px;
+    height: 600px;
+    margin-bottom: 10px;
+    margin: 0 auto;
+}
+
+.MiddleCenterAlign{
+    margin:  100px 0px 0px 300px;
+    }
+    
+    
+/***     Textbox *****/
+.textboxOutFocus
+    {
+     height:20px;
+     border:1;
+     font-size:16px;
+     border-style:solid;
+     border-color:#cccdcf;
+     background-color: #FFFFFF;
+}
+
+.textboxInFocus
+    {
+     height:20px;
+     border:1;
+     font-size:16px;
+     border-style:solid;
+     border-color:#a4b0be;
+     background-color: #FFFFCC;
+}
+        
+/*** *************    Textbox *****/
